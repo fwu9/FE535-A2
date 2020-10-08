@@ -28,8 +28,9 @@ def Extract_Company_Name_Purpose(url, times):
 
     return(table)                
 
-                    
-df = pd.DataFrame(Extract_Company_Name_Purpose('http://3.95.249.159:8000/random_company', 50),
+
+ if __name__ == '__main__':
+              
+    df = pd.DataFrame(Extract_Company_Name_Purpose('http://3.95.249.159:8000/random_company', 50),
                   columns = ['Name','Purpose'])
-print(df)
-df.to_csv('A2_result.csv')
+    df.to_csv('A2_result.csv')
